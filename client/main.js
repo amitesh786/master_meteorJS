@@ -4,6 +4,7 @@ import './main.html';
 
 Resolutions = new Mongo.Collection('resolutions');
 
+// Client Respond
 if (Meteor.isClient) {
     Template.body.helpers({
         resolutions: function () {
@@ -11,7 +12,7 @@ if (Meteor.isClient) {
         }
     });
 }
-
+// Server startup
 if (Meteor.isServer) {
     Meteor.startup(() => {
         // code to run on server at startup
